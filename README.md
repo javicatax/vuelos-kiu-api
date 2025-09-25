@@ -69,6 +69,11 @@ Una vez que los contenedores estén en funcionamiento, aplica las migraciones de
 
 ```bash
 docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py migrate
+```
+Collect archivos estaticos
+```bash
+docker-compose exec web python manage.py collectstatic
 ```
 
 5. Consumir y Cargar Eventos de Vuelo
