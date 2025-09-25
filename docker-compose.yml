@@ -5,7 +5,6 @@ services:
     image: postgres:14
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    # Aquí puedes usar env_file si las variables de PostgreSQL también están en .env
     env_file:
       - .env
     healthcheck:
@@ -23,7 +22,6 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    # La clave para usar python-dotenv es especificar el archivo .env aquí
     env_file:
       - .env
 
