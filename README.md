@@ -74,9 +74,9 @@ docker-compose exec web python manage.py migrate
 5. Consumir y Cargar Eventos de Vuelo
 Para poblar la base de datos con los eventos de vuelo, puedes usar el comando de gestión personalizado:
 
-```bash
-docker-compose exec web python manage.py loadflights
 Este comando consume el mock de la API externa y guarda los datos en la base de datos local.
+```bash
+docker-compose exec web python manage.py fetch_flight_events
 ```
 
 6. Usar la API
