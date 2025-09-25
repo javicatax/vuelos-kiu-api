@@ -1,0 +1,26 @@
+version: '3.12'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    # Aquí puedes usar env_file si las variables de PostgreSQL también están en .env
+    env_file:
+      - .env
+
+  web:
+    build: .
+    command: gunicorn vuelos_kiu_api.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    # La clave para usar python-dotenv es especificar el archivo .env aquí
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:

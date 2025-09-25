@@ -1,0 +1,74 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+env_kiu_project/
+
+# Base de datos
+*.sqlite3
+*.db
+db.sqlite3
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Django
+*.log
+local_settings.py
+settings/local.py
+
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Entornos
+.env
+.env.local
+.env.production
+.env.development
+
+# Static files (si usas collectstatic)
+staticfiles/
+media/
+
+# Archivos de sistema operativo
+# Windows
+[Tt]humbs.db
+
+# MacOS
+.DS_Store
+
+# Logs
+logs/
+*.log

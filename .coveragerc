@@ -1,0 +1,11 @@
+[report]
+# Excluir directorios y archivos de la medición de cobertura
+omit =
+    */migrations/*
+    */tests.py
+    */admin.py
+    */urls.py
+    manage.py
+    wsgi.py
+    asgi.py
+    */commands/*
