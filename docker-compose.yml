@@ -2,12 +2,17 @@ version: '3.12'
 
 services:
   db:
-    image: postgres:13
+    image: postgres:14
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     # Aquí puedes usar env_file si las variables de PostgreSQL también están en .env
     env_file:
       - .env
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   web:
     build: .
